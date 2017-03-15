@@ -15,9 +15,19 @@ CREATE TABLE admins (
   password_digest VARCHAR(255) NOT NULL
 );
 
+CREATE TABLE jobs (
+  id              BIGSERIAL PRIMARY KEY,
+  position        VARCHAR(255) NOT NULL,
+  city            VARCHAR(255) NOT NULL,
+  state           VARCHAR(255) NOT NULL,
+  description     TEXT NOT NULL,
+  status          VARCHAR(255) DEFAULT 'Open' NOT NULL
+);
+
 CREATE TABLE applications (
   id              BIGSERIAL PRIMARY KEY,
   user_id         INTEGER REFERENCES users (id) NOT NULL,
+  job_id          INTEGER REFERENCES jobs (id) NOT NULL,
   street          VARCHAR(255) NOT NULL,
   city            VARCHAR(255) NOT NULL,
   state           VARCHAR(255) NOT NULL,
