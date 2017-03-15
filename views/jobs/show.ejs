@@ -15,12 +15,15 @@
     <input type="text" name="application[phone_number]" placeholder="Phone Number">
     <label for="app-work-auth">Do you require U.S. work authorization?</label>
     <select id="app-work-auth" name="application[work_auth]">
+      <option value="" disabled selected>Select</option>
       <option value="TRUE">I am legally authorized to work for any employer in the U.S.</option>
       <option value="FALSE">I require employer sponsorship to work in the U.S.</option>
     </select>
     <input type="text" name="application[salary_req]" placeholder="Salary Requirement">
+    <input type="text" name="application[hear_about_us]" placeholder="How did you hear about us?">
     <label for="app-worked-here">Have you ever worked at Specific Assembly?</label>
     <select id="app-worked-here" name="application[worked_here]">
+      <option value="" disabled selected>Select</option>
       <option value="TRUE">Yes</option>
       <option value="FALSE">No</option>
     </select>
@@ -29,6 +32,9 @@
     <input type="text" name="application[school]" placeholder="School">
     <input type="text" name="application[cover_letter]" placeholder="Link to Cover Letter">
     <input type="text" name="application[resume]" placeholder="Link to Resume">
+    <input type="text" name="application[website]" placeholder="Personal Website">
+    <input type="text" name="application[github]" placeholder="GitHub">
+    <input type="text" name="application[linkedin]" placeholder="LinkedIn">
     <input type="submit" value="Apply">
   </form>
 </main>

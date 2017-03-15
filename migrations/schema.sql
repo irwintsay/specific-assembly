@@ -42,7 +42,10 @@ CREATE TABLE applications (
   education_level VARCHAR(255) NOT NULL,
   school          VARCHAR(255) NOT NULL,
   cover_letter    VARCHAR(255) NOT NULL,
-  resume          VARCHAR(255) NOT NULL
+  resume          VARCHAR(255) NOT NULL,
+  website         VARCHAR(255),
+  github          VARCHAR(255),
+  linkedin        VARCHAR(255)
 );
 
 COMMIT;
