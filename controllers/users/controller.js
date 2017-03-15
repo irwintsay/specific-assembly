@@ -9,7 +9,11 @@ controller.new          = (req, res) => {
 controller.create       = (req, res) => {
   User
   .create(req.body.user)
-  .then(() => res.redirect('users/login'));
+  .then(() => res.redirect('account/login'));
+};
+
+controller.login        = (req, res) => {
+  res.render('users/login');
 };
 
 controller.processLogin = (req, res) => {

@@ -3,6 +3,19 @@
 <% include ../partials/head %>
 <body>
 <% include ../partials/header %>
+<main>
+  <form action="/account" method="POST">
+    <label for="first-name">First Name</label>
+    <input id="first-name" type="text" name="user[first_name]" placeholder="John">
+    <label for="last-name">Last Name</label>
+    <input id="last-name" type="text" name="user[last_name]" placeholder="Smith">
+    <label for="email">Email</label>
+    <input id="email" type="text" name="user[email]" placeholder="johnsmith@mail.com">
+    <label for="password">Password</label>
+    <input id="password" type="password" name="user[password]" placeholder="Password">
+    <input type="submit" value="Create Account">
+  </form>
+</main>
 <% include ../partials/footer %>
 </body>
 </html>
