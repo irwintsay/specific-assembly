@@ -1,11 +1,11 @@
-let authorization       = {};
+let AuthService        = {};
 
-authorization.restrict  = (req, res, next) => {
+AuthService.restrict  = (req, res, next) => {
   if(req.session.isAuthenticated) {
     next();
   } else {
-    res.redirect('/users/login');
+    res.redirect('/account/login?error=notloggedin');
   }
 };
 
-module.exports          = authorization;
+module.exports         = AuthService;
