@@ -23,4 +23,8 @@ controller.create     = (req, res) => {
   .then(() =>  res.redirect('/jobs'));
 };
 
+controller.thank      = (req, res) => {
+  res.render('jobs/thankyou');
+}
+
 module.exports        = controller;
