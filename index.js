@@ -1,6 +1,6 @@
-require('dotenv').config();
 const express         = require('express');
 const app             = express();
+require('dotenv').config();
 
 app.set('view engine', 'ejs');
 app.set('views', './views');
@@ -14,6 +14,13 @@ app.use(logger('dev'));
 const bodyParser      = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+
+const session         = require('express-session');
+app.use(session({
+  secret: 'I need a job!',
+  resave: false,
+  saveUnitialized: true
+}));
 
 app.use('/', require('./resources'));
 
