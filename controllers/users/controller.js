@@ -9,11 +9,11 @@ controller.new          = (req, res) => {
 controller.create       = (req, res) => {
   User
   .create(req.body.user)
-  .then(() => res.redirect('/login'));
+  .then(() => res.redirect('users/login'));
 };
 
 controller.processLogin = (req, res) => {
-
+  res.render('users/login');
 };
 
 module.exports          = controller;
