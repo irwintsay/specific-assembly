@@ -5,17 +5,25 @@
 <% include ../partials/header %>
 <main>
   <h3>Front-end Developer</h3>
-  <form action="/applications" method="POST">
-    <input type="hiddden" name="application[job_id]" value="<%= job_id %>">
+  <form action="/apply" method="POST">
+    <input type="hidden" name="application[job_id]" value="<%= job_id %>">
     <input type="text" name="application[street]" placeholder="Street Address">
     <input type="text" name="application[city]" placeholder="City">
     <input type="text" name="application[state]" placeholder="State">
     <input type="text" name="application[country]" placeholder="Country">
     <input type="text" name="application[zip_code]" placeholder="Zip Code">
     <input type="text" name="application[phone_number]" placeholder="Phone Number">
-    <input type="text" name="application[work_auth]" placeholder="Do you require U.S. work authorization?">
+    <label for="app-work-auth">Do you require U.S. work authorization?</label>
+    <select id="app-work-auth" name="application[work_auth]">
+      <option value="TRUE">I am legally authorized to work for any employer in the U.S.</option>
+      <option value="FALSE">I require employer sponsorship to work in the U.S.</option>
+    </select>
     <input type="text" name="application[salary_req]" placeholder="Salary Requirement">
-    <input type="text" name="application[worked_here]" placeholder="Have you ever worked at Specific Assembly?">
+    <label for="app-worked-here">Have you ever worked at Specific Assembly?</label>
+    <select id="app-worked-here" name="application[worked_here]">
+      <option value="TRUE">Yes</option>
+      <option value="FALSE">No</option>
+    </select>
     <input type="text" name="application[date_available]" placeholder="Date available to start?">
     <input type="text" name="application[education_level]" placeholder="Highest level of education">
     <input type="text" name="application[school]" placeholder="School">
