@@ -6,6 +6,7 @@
 <main>
   <h3>Front-end Developer</h3>
   <form action="/applications" method="POST">
+    <input type="hiddden" name="application[job_id]" value="<%= job_id %>">
     <input type="text" name="application[street]" placeholder="Street Address">
     <input type="text" name="application[city]" placeholder="City">
     <input type="text" name="application[state]" placeholder="State">

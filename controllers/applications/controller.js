@@ -3,7 +3,7 @@ let controller          = {};
 
 controller.create       = (req, res) => {
   Application
-  .create(application)
+  .create(req.body.application)
   .then(() => res.redirect('/careers/thankyou'));
 };
 

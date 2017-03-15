@@ -8,9 +8,11 @@ controller.index      = (req, res) => {
 };
 
 controller.show       = (req, res) => {
-  Job
-  .findById(req.params.id)
-  .then(job => res.render('jobs/show', { job }));
+  // Job
+  // .findById(req.params.id)
+  // .then(job => res.render('jobs/show', { job }));
+
+  res.render('jobs/show', { job_id: req.params.id })
 };
 
 controller.new        = (req, res) => {
