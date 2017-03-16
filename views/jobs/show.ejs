@@ -3,39 +3,94 @@
 <% include ../partials/head %>
 <body>
 <% include ../partials/header %>
-<main>
+<main class="container">
   <h3>Front-end Developer</h3>
   <form action="/apply" method="POST">
+  <div class="row">
+  <div class="column">
+  <fieldset>
     <input type="hidden" name="application[job_id]" value="<%= job_id %>">
-    <input type="text" name="application[street]" placeholder="Street Address">
-    <input type="text" name="application[city]" placeholder="City">
-    <input type="text" name="application[state]" placeholder="State">
-    <input type="text" name="application[country]" placeholder="Country">
-    <input type="text" name="application[zip_code]" placeholder="Zip Code">
-    <input type="text" name="application[phone_number]" placeholder="Phone Number">
+
+    <div class="row">
+      <div class="column">
+        <label for="app-street">Street</label>
+        <input id="app-street" type="text" name="application[street]" placeholder="1 Broadway Street">
+      </div>
+      
+      <div class="column">
+        <label for="app-city">City</label>
+        <input id="app-city" type="text" name="application[city]" placeholder="New York">
+      </div>
+
+      <div class="column">
+        <label for="app-state">State</label>
+        <input id="app-state" type="text" name="application[state]" placeholder="NY">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="column">
+        <label for="app-country">Country</label>
+        <input type="text" name="application[country]" placeholder="United States">
+      </div>
+      <div class="column">
+        <label for="app-zip-code">Zip Code</label>
+        <input id="app-zip-code" type="text" name="application[zip_code]" placeholder="10010">
+      </div>
+      <div class="column">
+        <label for="app-phone-number">Phone Number</label>
+        <input id="app-phone-number" type="text" name="application[phone_number]" placeholder="(555) 555-5555">
+      </div>
+    </div>
+
     <label for="app-work-auth">Do you require U.S. work authorization?</label>
     <select id="app-work-auth" name="application[work_auth]">
       <option value="" disabled selected>Select</option>
       <option value="TRUE">I am legally authorized to work for any employer in the U.S.</option>
       <option value="FALSE">I require employer sponsorship to work in the U.S.</option>
     </select>
-    <input type="text" name="application[salary_req]" placeholder="Salary Requirement">
-    <input type="text" name="application[hear_about_us]" placeholder="How did you hear about us?">
+
+    <label for="app-salary">Salary Requirements</label>
+    <input id="app-salary" type="text" name="application[salary_req]" placeholder="$">
+
+    <label for="app-hear">How did you hear about us?</label>
+    <input id="app-hear" type="text" name="application[hear_about_us]" placeholder="Friend, LinkedIn, Google, The Muse">
+
     <label for="app-worked-here">Have you ever worked at Specific Assembly?</label>
     <select id="app-worked-here" name="application[worked_here]">
       <option value="" disabled selected>Select</option>
       <option value="TRUE">Yes</option>
       <option value="FALSE">No</option>
     </select>
-    <input type="text" name="application[date_available]" placeholder="Date available to start?">
-    <input type="text" name="application[education_level]" placeholder="Highest level of education">
-    <input type="text" name="application[school]" placeholder="School">
-    <input type="text" name="application[cover_letter]" placeholder="Link to Cover Letter">
-    <input type="text" name="application[resume]" placeholder="Link to Resume">
-    <input type="text" name="application[website]" placeholder="Personal Website">
-    <input type="text" name="application[github]" placeholder="GitHub">
-    <input type="text" name="application[linkedin]" placeholder="LinkedIn">
+
+    <label for="app-date-available">Date available to start?</label>
+    <input id="app-date-available" type="text" name="application[date_available]" placeholder="2017-1-1">
+
+    <label for="app-education">Highest Level of Education</label>
+    <input id="app-education" type="text" name="application[education_level]" placeholder="High School, Some College, College, Graduate School">
+
+    <label for="app-school">School</label>
+    <input id="app-school" type="text" name="application[school]" placeholder="School of Hard Knocks">
+
+    <label for="app-cover-letter">Link to cover letter</label>
+    <input type="text" name="application[cover_letter]" placeholder="Dropbox, Google Drive, etc">
+
+    <label for="app-resume">Link to resume</label>
+    <input id="app-resume" type="text" name="application[resume]" placeholder="Dropbox, Google Drive, etc">
+
+    <label for="app-website">Personal website</label>
+    <input type="text" name="application[website]" placeholder="mywebsite.com">
+
+    <label for="app-github">GitHub username</label>
+    <input type="text" name="application[github]" placeholder="github.com/johnsmith">
+
+    <label for="app-linkedin">LinkedIn profile</label>
+    <input type="text" name="application[linkedin]" placeholder="linkedin.com/in/johnsmith">
+
     <input type="submit" value="Apply">
+    </fieldset>
+    </div>
+    </div>
   </form>
 </main>
 <% include ../partials/footer %>
