@@ -1,3 +1,10 @@
+/* --- Fonts --- */
+@import url('https://fonts.googleapis.com/css?family=Lato|Slabo+27px');
+/* --- End Fonts --- */
+
+/*========================*/
+
+/* --- Element Styles --- */
 * {
   margin: 0;
   padding: 0;
@@ -5,18 +12,25 @@
 }
 
 body {
-  background-color: lightgrey;
+  background-color: #EEE;
   font-size: 16px;
+  font-family: Lato;
 }
 
 ul {
   list-style-type: none;
 }
+/* --- End Elements --- */
 
-/* --- Nav-bar Properties --- */
+/*========================*/
+
+/* --- Nav-bar Styles --- */
 nav {
   display: flex;
   height: 60px;
+  width: 100%;
+  background-color: #000;
+  color: #EEE;
 
   /*Flex Properties*/
   justify-content: space-between;
@@ -26,26 +40,61 @@ nav {
 nav h1, h2, h3, h4, h5, h6 {
   display: inline;
   margin-left: 50px;
+  font-family: 'Slabo 27px', serif;
   font-weight: normal;
 }
 
 nav ul {
+  display: flex;
+  align-items: center;
   margin-right: 50px;
 }
 
 nav li {
-  display: inline;
   font-size: .7em;
+  margin: 0 10px;
 }
 /* --- End Nav-bar ---*/
 
+/*========================*/
 
-/* --- Footer Properties --- */
+/* --- Main Styles --- */
+
+/* --- End Main --- */
+
+/*========================*/
+
+/* --- Footer Styles --- */
 
 footer {
-  text-align: center;
+  display: flex;
+  position: relative;
+  height: 40px;
+  bottom: 0;
+  width: 100%;
+  background-color: #000;
+  color: #EEE;
+
+  /* Flex Properties*/
+  justify-content: space-between;
+  align-items: center;
   font-size: .5em;
+}
+
+footer p {
+  margin-left: 50px;
+}
+
+footer ul {
+  display: flex;
+  align-items: center;
+  margin-right: 50px;
+}
+footer li {
+  margin: 0 5px;
 }
 
 
 /* --- End Footer --- */
+
+/*========================*/
