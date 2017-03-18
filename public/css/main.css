@@ -1,3 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   background-color: lightgrey;
+  font-size: 16px;
 }
+
+ul {
+  list-style-type: none;
+}
+
+/* --- Nav-bar Properties --- */
+nav {
+  display: flex;
+  height: 60px;
+
+  /*Flex Properties*/
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav h1, h2, h3, h4, h5, h6 {
+  display: inline;
+  margin-left: 50px;
+  font-weight: normal;
+}
+
+nav ul {
+  margin-right: 50px;
+}
+
+nav li {
+  display: inline;
+  font-size: .7em;
+}
+/* --- End Nav-bar ---*/
+
+
+/* --- Footer Properties --- */
+
+footer {
+  text-align: center;
+  font-size: .5em;
+}
+
+
+/* --- End Footer --- */
