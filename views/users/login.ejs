@@ -4,13 +4,15 @@
 <body>
 <% include ../partials/header %>
 <main>
-  <form action="/account/login" method="POST">
-    <label for="email">Email</label>
-    <input id="email" type="text" name="user[email]" placeholder="johnsmith@mail.com">
-    <label for="password">Password</label>
-    <input id="password" type="password" name="user[password]" placeholder="Password">
-    <input type="submit" value="Login">
-  </form>
+  <div class="slide">
+    <form action="/account/login" method="POST">
+      <label for="email">Email</label>
+      <input id="email" type="text" name="user[email]" placeholder="johnsmith@mail.com">
+      <label for="password">Password</label>
+      <input id="password" type="password" name="user[password]" placeholder="Password">
+      <input type="submit" value="LOGIN">
+    </form>
+  </div>
 </main>
 <% include ../partials/footer %>
 </body>
