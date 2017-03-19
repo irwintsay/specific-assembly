@@ -3,7 +3,7 @@ const User              = require('../../models/user');
 let controller          = {};
 
 controller.new          = (req, res) => {
-  res.render('users/signup');
+  res.render('users/signup', req.pageInfo);
 };
 
 controller.create       = (req, res) => {
@@ -13,19 +13,20 @@ controller.create       = (req, res) => {
 };
 
 controller.login        = (req, res) => {
-  let error = {};
+  // Refactor this into middleware
+  req.pageInfo.error = {};
   if(req.query.error) {
-    if(req.query.error === 'usernotfound') error.message = 'Incorrect email address';
-    else if(req.query.error === 'incorrectpassword') error.message = 'Incorrect password';
-    else error.message = 'Please log in first';
+    if(req.query.error === 'usernotfound') req.pageInfo.error.message = 'Incorrect email address';
+    else if(req.query.error === 'incorrectpassword') req.pageInfo.error.message = 'Incorrect password';
+    else req.pageInfo.error.message = 'Please log in first';
   } else {
-    error.message = undefined;
+    req.pageInfo.error.message = undefined;
   }
-  res.render('users/login', error);
+  res.render('users/login', req.pageInfo);
 };
 
 controller.profile      = (req, res) => {
-  res.render('users/profile');
+  res.render('users/profile', req.pageInfo);
 };
 
 controller.processLogin = (req, res) => {

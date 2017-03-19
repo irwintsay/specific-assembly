@@ -22,7 +22,7 @@ ul {
 
 a {
   text-decoration: none;
-  color: #EEE;
+  color: #000;
 }
 
 input[type="text"], input[type="password"] {
@@ -63,44 +63,17 @@ input[type="submit"]:focus {
   font-size: .8em;
 }
 
-/*
-  Found this neat underline animation effect here:
-  http://tobiasahlin.com/blog/css-trick-animating-link-underlines/
-*/
-
-li > a {
-  position: relative;
-}
-
-li > a:before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 1px;
-  bottom: 0;
-  left: 0;
-  background-color: #EEE;
-  visibility: hidden;
-  -webkit-transform: scaleX(0);
-  transform: scaleX(0);
-  -webkit-transition: all 0.3s ease-in-out 0s;
-  transition: all 0.3s ease-in-out 0s;
-}
-
-li > a:hover:before {
-  text-decoration: underline;
-  visibility: visible;
-  -webkit-transform: scaleX(1);
-  transform: scaleX(1);
-}
-
-nav h2 > a:hover {
-  text-decoration: none;
-}
-
 /* --- End Elements --- */
 
-/*========================*/
+
+/* --- Generic Classes --- */
+
+.hide {
+  display: none;
+}
+
+/* --- End Generic Classes ---*/
+
 
 /* --- Nav-bar Styles --- */
 nav {
@@ -140,6 +113,43 @@ nav li {
   font-size: .7em;
   margin: 0 10px;
 }
+
+/*
+  Found this neat underline animation effect here:
+  http://tobiasahlin.com/blog/css-trick-animating-link-underlines/
+*/
+
+li > a, h2 > a {
+  position: relative;
+  color: #EEE;
+}
+
+li > a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #EEE;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+li > a:hover:before {
+  text-decoration: underline;
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+nav h2 > a:hover {
+  text-decoration: none;
+}
+
 /* --- End Nav-bar ---*/
 
 
