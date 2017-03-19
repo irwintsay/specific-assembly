@@ -4,19 +4,22 @@ let controller        = {};
 controller.index      = (req, res) => {
   Job
   .findAll()
-  .then(jobs => res.render('jobs/index', { jobs }));
+  .then(jobs => {
+    res.pageInfo.jobs = jobs;
+    res.render('jobs/index', res.pageInfo)
+  });
 };
 
 controller.show       = (req, res) => {
   // Job
   // .findById(req.params.id)
   // .then(job => res.render('jobs/show', { job }));
-
-  res.render('jobs/show', { job_id: req.params.id })
+  res.pageInfo.job_id = req.params.id;
+  res.render('jobs/show', res.pageInfo)
 };
 
 controller.new        = (req, res) => {
-  res.render('jobs/new');
+  res.render('jobs/new', res.pageInfo);
 };
 
 controller.create     = (req, res) => {
