@@ -7,15 +7,17 @@
   <div class="slide">
     <form action="/account/login" method="POST">
       <h3>SIGN IN TO YOUR ACCOUNT</h3>
-      <div>
-        <label for="email">Email</label>
-        <input id="email" type="text" name="user[email]" placeholder="johnsmith@mail.com">
+      <div class="split">
+        <div>
+          <label for="email">Email</label>
+          <input id="email" type="text" name="user[email]" placeholder="johnsmith@mail.com">
+        </div>
+        <div>
+          <label for="password">Password</label>
+          <input id="password" type="password" name="user[password]" placeholder="Password">
+        </div>
+        <input type="submit" value="LOGIN">
       </div>
-      <div>
-        <label for="password">Password</label>
-        <input id="password" type="password" name="user[password]" placeholder="Password">
-      </div>
-      <input type="submit" value="LOGIN">
     </form>
   </div>
 </main>
