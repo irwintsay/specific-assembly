@@ -205,6 +205,10 @@ nav h2 > a:hover {
   padding: 50px;
 }
 
+.long {
+  height: 100%;
+}
+
 /* Post Properties */
 .post {
   margin: 25px 0;

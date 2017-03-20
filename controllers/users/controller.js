@@ -49,4 +49,9 @@ controller.processLogin = (req, res) => {
   });
 };
 
+controller.processLogout = (req, res) => {
+  req.session.destroy();
+  res.redirect('/');
+};
+
 module.exports          = controller;
