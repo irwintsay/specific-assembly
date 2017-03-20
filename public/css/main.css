@@ -36,6 +36,7 @@ input[type="submit"] {
   border: 0;
   border-radius: 0;
   box-shadow: none;
+  margin-top: 10px;
 }
 
 .slide input[type="submit"] {
@@ -88,6 +89,7 @@ nav {
   display: flex;
   height: 60px;
   width: 100%;
+  padding: 0 25px;
 
   background-color: #000;
   color: #EEE;
@@ -103,28 +105,28 @@ nav {
 
 nav h2 {
   display: inline;
-  margin-left: 50px;
   font-family: 'Slabo 27px', serif;
   font-weight: normal;
+  font-size: .9em;
 }
 
 nav ul {
   display: flex;
   align-items: center;
-  margin-right: 50px;
 }
 
 nav li {
-  font-size: .7em;
-  margin: 0 10px;
+  font-size: .6em;
+  margin-left: 10px;
 }
 
 /*
   Found this neat underline animation effect here:
   http://tobiasahlin.com/blog/css-trick-animating-link-underlines/
 */
+
 #logout {
-  height: 1.1em;
+  height: 1em;
   background: none;
 }
 
@@ -195,15 +197,15 @@ nav h2 > a:hover {
 .banner-copy-inner {
   position: relative;
   color: #EEE;
-  padding: 0 50px;
-  top: 40%;
+  padding: 0 25px;
+  top: 38%;
   transform: translateY(-50%);
   text-align: center;
 }
 
 .banner-copy-inner p {
   margin-top: 75px;
-  font-size: 2em;
+  font-size: 1.4em;
   line-height: 1.5;
 }
 
@@ -211,7 +213,7 @@ nav h2 > a:hover {
 .slide {
   /* Height is calculated by 100% view height minus Nav-bar + Footer */
   height: calc(100vh - 100px);
-  padding: 50px;
+  padding: 50px 25px;
 }
 
 .long {
@@ -221,7 +223,7 @@ nav h2 > a:hover {
 /* Post Properties */
 .post {
   margin: 25px 0;
-  padding: 25px 50px;
+  padding: 25px 25px;
   background-color: #DDD;
 }
 
@@ -234,21 +236,26 @@ nav h2 > a:hover {
 /* Slide Form Properties */
 
 .slide > form {
-  padding-left: 50px;
+  width: 80%;
+  margin: auto;
+  text-align: center;
 }
 
 .slide > form > div {
   margin: 20px 0;
+  text-align: left;
 }
 
 .slide > form label {
-  display: inline-block;
-  width: 160px;
-  margin-right: 10px;
+  display: block;
+  width: 200px;
+  margin: 0 auto 5px auto;
   font-size: .8em;
 }
 
-.slide > form input[type="text"] {
+.slide > form input[type="text"], .slide > form input[type="password"] {
+  margin: auto;
+  display: block;
   width: 200px;
 }
 
@@ -291,27 +298,26 @@ footer {
   width: 100%;
   background-color: #000;
   color: #EEE;
+  padding: 0 25px;
 
   /* Flex Properties */
   justify-content: space-between;
   align-items: center;
-  font-size: .5em;
-}
-
-footer p {
-  margin-left: 50px;
+  font-size: .35em;
 }
 
 footer ul {
   display: flex;
   align-items: center;
-  margin-right: 50px;
 }
+
 footer li {
-  margin: 0 5px;
+  margin-left: 3px;
 }
 
 
 /* --- End Footer --- */
 
 /*========================
+
+/* Media Queries */
