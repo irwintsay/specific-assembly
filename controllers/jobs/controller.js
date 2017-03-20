@@ -29,7 +29,7 @@ controller.create     = (req, res) => {
 };
 
 controller.thank      = (req, res) => {
-  res.render('jobs/thankyou');
+  res.render('jobs/thankyou', res.pageInfo);
 }
 
 module.exports        = controller;
