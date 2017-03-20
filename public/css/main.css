@@ -37,12 +37,13 @@ input[type="submit"] {
   border-radius: 0;
   box-shadow: none;
   margin-top: 10px;
+  width: 7em;
+  font-size: .8em;
 }
 
 .slide input[type="submit"] {
   color: #EEE;
   padding: .7em 1em;
-  font-size: .6em;
   transform: translateY(-1px);
   transition: .3s all ease;
 }
