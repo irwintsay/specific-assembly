@@ -31,25 +31,30 @@ input[type="text"], input[type="password"] {
 }
 
 input[type="submit"] {
-  color: #EEE;
-  padding: .7em 1em;
-  font-size: .6em;
-  transform: translateY(-1px);
-
   /* Make Submit button look flat */
   background-color: #000;
   border: 0;
   border-radius: 0;
   box-shadow: none;
+}
+
+.slide input[type="submit"] {
+  color: #EEE;
+  padding: .7em 1em;
+  font-size: .6em;
+  transform: translateY(-1px);
   transition: .3s all ease;
 }
 
 input[type="submit"]:hover {
-  background-color: #C44E4E;
   cursor: pointer;
 }
 
-input[type="submit"]:active {
+.slide input[type="submit"]:hover {
+  background-color: #C44E4E;
+}
+
+.slide input[type="submit"]:active {
   transform: translateY(1px);
   outline: none;
 }
@@ -118,13 +123,17 @@ nav li {
   Found this neat underline animation effect here:
   http://tobiasahlin.com/blog/css-trick-animating-link-underlines/
 */
+#logout {
+  height: 1.1em;
+  background: none;
+}
 
-li > a, h2 > a {
+li > a, h2 > a, input#logout {
   position: relative;
   color: #EEE;
 }
 
-li > a:before {
+li > a:before, input#logout:before {
   content: "";
   position: absolute;
   width: 100%;
@@ -139,7 +148,7 @@ li > a:before {
   transition: all 0.3s ease-in-out 0s;
 }
 
-li > a:hover:before {
+li > a:hover:before, input#logout:hover:before {
   text-decoration: underline;
   visibility: visible;
   -webkit-transform: scaleX(1);
@@ -234,11 +243,39 @@ nav h2 > a:hover {
 
 .slide > form label {
   display: inline-block;
-  width: 120px;
+  width: 160px;
+  margin-right: 10px;
+  font-size: .8em;
+}
+
+.slide > form input[type="text"] {
+  width: 200px;
+}
+
+.slide > form select {
+  width: 200px;
+  font-size: .8em;
+  height: 2em;
+  transform: translateY(-.5em);
 }
 
 .slide > form > label {
   margin-left: 10px;
+}
+
+/* Profile Properties */
+
+.profile {
+  margin-top: 50px;
+}
+
+.profile h4 {
+  margin: 10px 0;
+}
+
+.profile span {
+  display: inline-block;
+  width: 4em;
 }
 
 /* --- End Main --- */

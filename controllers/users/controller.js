@@ -26,6 +26,7 @@ controller.login        = (req, res) => {
 };
 
 controller.profile      = (req, res) => {
+  res.pageInfo.user = req.session.user;
   res.render('users/profile', res.pageInfo);
 };
 
