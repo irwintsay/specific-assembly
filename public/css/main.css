@@ -83,6 +83,11 @@ input[type="submit"]:focus {
   display: none;
 }
 
+.split {
+  display: inline-block;
+  width: 45%;
+}
+
 /* --- End Generic Classes ---*/
 
 
@@ -195,7 +200,6 @@ nav h2 > a:hover {
   background-position: center;
 }
 
-
 .banner-screen {
   background-color: #000;
   opacity: .5;
@@ -240,10 +244,22 @@ nav h2 > a:hover {
   line-height: 1.5;
 }
 
+.post li {
+  margin: 10px;
+}
+
+.post li a {
+  font-size: .8em;
+}
+
+.post li a:hover {
+  color: #C44E4E;
+}
+
 /* Slide Form Properties */
 
 .slide > form {
-  width: 80%;
+  width: 100%;
   margin: auto;
   text-align: center;
 }
@@ -256,7 +272,7 @@ nav h2 > a:hover {
 label {
   display: block;
   width: 200px;
-  margin: 0 auto 5px auto;
+  margin: 0 auto;
   font-size: .8em;
 }
 
@@ -266,7 +282,6 @@ select {
   margin: 0 auto;
   font-size: .8em;
   height: 2em;
-  transform: translateY(-.5em);
 }
 
 .slide > form > label {
@@ -318,7 +333,6 @@ footer li {
   margin-left: 3px;
 }
 
-
 /* --- End Footer --- */
 
 /*========================
@@ -331,7 +345,7 @@ footer li {
   }
 
   h3 {
-    font-size: 2.5em;
+    font-size: 2em;
   }
 
   h5 {
@@ -339,7 +353,7 @@ footer li {
   }
 
   .slide p {
-    font-size: 1.5em;
+    font-size: 1.3em;
   }
 
   nav {
@@ -357,7 +371,7 @@ footer li {
 
   #logout {
     font-size: .9em;
-    transform: translateY(-9px);
+    transform: translateY(1px);
   }
 
   .banner-copy-inner p {
@@ -377,29 +391,49 @@ footer li {
     margin-bottom: 30px;
   }
 
+  .description {
+    padding: 0 50px;
+  }
+
+  .description p {
+    margin: 30px 0;
+    font-size: 1em;
+  }
+
+  .description ul {
+    list-style-type: disc;
+    margin: 25px;
+  }
+
+  .description li {
+    font-size: 1em;
+  }
+
   label {
-    font-size: 1.2em;
-    width: 300px;
+    font-size: 1em;
+    width: 80%;
+    height: 2.5em;
   }
 
   input[type="text"], input[type="password"] {
     padding: .3em;
-    font-size: 1.5em;
-    width: 300px;
+    font-size: 1em;
+    width: 80%;
+    margin-bottom: 20px;
   }
 
   input[type="submit"] {
-    margin-top: 20px;
+    display: block;
+    margin: 20px auto;
     width: 7em;
     font-size: 1em;
   }
 
   select {
-    width: 300px;
-    margin: 15px auto 0 auto;
+    width: 80%;
+    margin: 0px auto 20px auto;
     font-size: 1em;
     height: 2em;
-    transform: translateY(-.5em);
   }
 
   footer {
