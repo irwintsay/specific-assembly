@@ -28,17 +28,21 @@ a {
 input[type="text"], input[type="password"] {
   padding: .3em;
   font-size: .8em;
+  margin: auto;
+  display: block;
+  width: 200px;
 }
 
 input[type="submit"] {
+  margin-top: 10px;
+  width: 7em;
+  font-size: .8em;
+
   /* Make Submit button look flat */
   background-color: #000;
   border: 0;
   border-radius: 0;
   box-shadow: none;
-  margin-top: 10px;
-  width: 7em;
-  font-size: .8em;
 }
 
 .slide input[type="submit"] {
@@ -108,7 +112,7 @@ nav h2 {
   display: inline;
   font-family: 'Slabo 27px', serif;
   font-weight: normal;
-  font-size: .9em;
+  font-size: 1em;
 }
 
 nav ul {
@@ -127,8 +131,10 @@ nav li {
 */
 
 #logout {
-  height: 1em;
+  height: 1.2em;
   background: none;
+  width: 4em;
+  transform: translateY(-4px);
 }
 
 li > a, h2 > a, input#logout {
@@ -213,7 +219,7 @@ nav h2 > a:hover {
 /* Slide Properties */
 .slide {
   /* Height is calculated by 100% view height minus Nav-bar + Footer */
-  height: calc(100vh - 100px);
+  height: calc(100vh - 110px);
   padding: 50px 25px;
 }
 
@@ -247,21 +253,17 @@ nav h2 > a:hover {
   text-align: left;
 }
 
-.slide > form label {
+label {
   display: block;
   width: 200px;
   margin: 0 auto 5px auto;
   font-size: .8em;
 }
 
-.slide > form input[type="text"], .slide > form input[type="password"] {
-  margin: auto;
+select {
   display: block;
   width: 200px;
-}
-
-.slide > form select {
-  width: 200px;
+  margin: 0 auto;
   font-size: .8em;
   height: 2em;
   transform: translateY(-.5em);
@@ -294,7 +296,7 @@ nav h2 > a:hover {
 footer {
   display: flex;
   position: relative;
-  height: 40px;
+  height: 50px;
   bottom: 0;
   width: 100%;
   background-color: #000;
@@ -304,7 +306,7 @@ footer {
   /* Flex Properties */
   justify-content: space-between;
   align-items: center;
-  font-size: .35em;
+  font-size: .37em;
 }
 
 footer ul {
@@ -322,3 +324,90 @@ footer li {
 /*========================
 
 /* Media Queries */
+
+@media only screen and (min-width: 768px) {
+  h2 {
+    font-size: 4em;
+  }
+
+  h3 {
+    font-size: 2.5em;
+  }
+
+  h5 {
+    font-size: 1.5em;
+  }
+
+  .slide p {
+    font-size: 1.5em;
+  }
+
+  nav {
+    padding: 0 60px;
+  }
+
+  nav h2 {
+    font-size: 2em;
+  }
+
+  nav li {
+    font-size: 1em;
+    margin-left: 30px;
+  }
+
+  #logout {
+    font-size: .9em;
+    transform: translateY(-9px);
+  }
+
+  .banner-copy-inner p {
+    font-size: 2em;
+    padding: 0 50px;
+  }
+
+  .slide {
+    padding: 75px 60px;
+  }
+
+  .post {
+    padding: 50px;
+  }
+
+  .profile span {
+    margin-bottom: 30px;
+  }
+
+  label {
+    font-size: 1.2em;
+    width: 300px;
+  }
+
+  input[type="text"], input[type="password"] {
+    padding: .3em;
+    font-size: 1.5em;
+    width: 300px;
+  }
+
+  input[type="submit"] {
+    margin-top: 20px;
+    width: 7em;
+    font-size: 1em;
+  }
+
+  select {
+    width: 300px;
+    margin: 15px auto 0 auto;
+    font-size: 1em;
+    height: 2em;
+    transform: translateY(-.5em);
+  }
+
+  footer {
+    padding: 0 60px;
+    font-size: 1em;
+  }
+
+  footer li {
+    margin-left: 10px;
+  }
+}
