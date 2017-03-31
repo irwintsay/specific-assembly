@@ -8,7 +8,9 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "node index.js",
+    "build-css": "node-sass --include-path scss assets/stylesheets/main.scss public/css/main.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
   },
   "repository": {
     "type": "git",
@@ -30,5 +32,6 @@
     "method-override": "^2.3.7",
     "morgan": "^1.8.1",
     "pg-promise": "^5.6.4"
-  }
+  },
+  "devDependencies": {}
 }
