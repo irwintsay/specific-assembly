@@ -153,12 +153,12 @@ nav li {
   transform: translateY(-4px);
 }
 
-li > a, h2 > a, input#logout {
+li > a, h2 > a, input#logout, li > form {
   position: relative;
   color: #EEE;
 }
 
-li > a:before, input#logout:before {
+li > a:before, li > form::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -173,7 +173,7 @@ li > a:before, input#logout:before {
   transition: all 0.3s ease-in-out 0s;
 }
 
-li > a:hover:before, input#logout:hover:before {
+li > a:hover:before, li > form:hover::before {
   text-decoration: underline;
   visibility: visible;
   -webkit-transform: scaleX(1);
