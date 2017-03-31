@@ -1,6 +1,7 @@
+@import 'normalize';
+
 /* --- Fonts --- */
 @import url('https://fonts.googleapis.com/css?family=Lato|Slabo+27px');
-/* --- End Fonts --- */
 
 // Variables
 $font-stack: 'Lato', sans-serif;
@@ -29,7 +30,23 @@ a {
   color: $primary-color;
 }
 
-input[type="text"], input[type="password"] {
+label {
+  display: block;
+  width: 200px;
+  margin: 0 auto;
+  font-size: .8em;
+}
+
+select {
+  display: block;
+  width: 200px;
+  margin: 0 auto;
+  font-size: .8em;
+  height: 2em;
+}
+
+input[type="text"],
+input[type="password"] {
   padding: .3em;
   font-size: .8em;
   margin: auto;
@@ -53,6 +70,11 @@ input[type="submit"]:hover {
   cursor: pointer;
 }
 
+input[type="submit"]:focus {
+  outline: none;
+}
+
+
 .slide {
   input[type="submit"] {
     color: $secondary-color;
@@ -67,10 +89,6 @@ input[type="submit"]:hover {
     transform: translateY(1px);
     outline: none;
   }
-}
-
-input[type="submit"]:focus {
-  outline: none;
 }
 
 ::placeholder {
@@ -246,6 +264,20 @@ nav h2 > a:hover {
   height: 100%;
 }
 
+
+/* Slide Form Properties */
+
+.slide > form {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+
+.slide > form > div {
+  margin: 20px 0;
+  text-align: left;
+}
+
 /* Post Properties */
 .post {
   margin: 25px 0;
@@ -266,34 +298,6 @@ nav h2 > a:hover {
     a:hover { color: #C44E4E; }
   }
 
-}
-
-/* Slide Form Properties */
-
-.slide > form {
-  width: 100%;
-  margin: auto;
-  text-align: center;
-}
-
-.slide > form > div {
-  margin: 20px 0;
-  text-align: left;
-}
-
-label {
-  display: block;
-  width: 200px;
-  margin: 0 auto;
-  font-size: .8em;
-}
-
-select {
-  display: block;
-  width: 200px;
-  margin: 0 auto;
-  font-size: .8em;
-  height: 2em;
 }
 
 .slide > form > label {
